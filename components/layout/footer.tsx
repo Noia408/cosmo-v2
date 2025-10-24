@@ -1,0 +1,83 @@
+'use client'
+import Image from "next/image";
+import Link from "next/link";
+
+const links = [
+    {
+      name: "Página Inicial",
+      href: "/",
+    },
+    {
+      name: "Bíblioteca",
+      href: "/biblioteca",
+    },
+    {
+      name: "Criadores",
+      href: "/criadores",
+    },
+    {
+      name: "Comunidade",
+      href: "/comunidade",
+    },
+    {
+      name: "Loja",
+      href: "/loja",
+    },
+    {
+      name: "Notícias",
+      href: "/noticias",
+    },
+    {
+      name: "Contactos",
+      href: "/contactos",
+    },
+  ];
+
+export default function footer() {   
+    return(
+        <div className="w-full h-[28vw] bg-gray-900 px-[5vw] flex gap-[4vw]">
+            <div className="w-[30%] h-full flex flex-col gap-[1vw]">
+                <Link href={""} className="w-[12vw] h-[5vw] relative flex ">
+                    <Image className="h-auto w-[12vw] object-cover absolute top-[-50%] left-[-22%]" src={"/assets/logo.png"} width={100} height={100} alt={"logo"} />
+                </Link>
+                <span className="text-gray-300 text-[1vw]">
+                    No COSMO BD, mergulhe em um catálogo repleto de HQs
+                    nacionais e internacionais, desde clássicos até lançamentos
+                    exclusivos. Descubra novos talentos, apoie criadores locais, 
+                    participe de uma comunidade apaixonada e encontre os
+                    melhores produtos geek na nossa loja oficial.
+                </span>
+            </div>
+            <div className="w-[calc(100%-30%)] h-full gap-[2vw] grid grid-cols-3 pt-[6vw]">
+                <div className="w-full h-full flex flex-col gap-[1vw]">
+                    <span className="text-white text-[1.3vw] font-bold">LINKS ÚTEIS</span>
+                    <ul className="flex flex-col gap-[0.5vw] pl-[1vw]">
+                    {links.map((link, index) => (
+                        <li key={index}>
+                        <Link href={link.href} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>
+                            {link.name}
+                        </Link>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
+                <div className="w-full h-full flex flex-col gap-[1vw]">
+                    <span className="text-white text-[1.3vw] font-bold">LEGAL</span>
+                    <ul className="flex flex-col gap-[0.5vw] pl-[1vw]">
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>Termos</Link></li>
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>Privacidade</Link></li>
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>Direitos</Link></li>
+                    </ul>
+                </div>
+                <div className="w-full h-full flex flex-col gap-[1vw]">
+                    <span className="text-white text-[1.3vw] font-bold">LEGAL</span>
+                    <ul className="flex flex-col gap-[0.5vw] pl-[1vw]">
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>Redes Sociais</Link></li>
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300`}>WhatsApp: (+244) 988223344</Link></li>
+                        <li><Link href={""} className={`text-white text-[1.1vw] hover:text-[#00D315] duration-300 font-bold`}>contato@cosmobd.com</Link></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+}
