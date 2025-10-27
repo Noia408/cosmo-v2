@@ -1,7 +1,6 @@
 'use client'
 import BannerSlide from '@/components/layout/BannerSlide';
 import CardSlide from '@/components/layout/CardSlide';
-import CarroselSlide from '@/components/layout/CardSlide';
 import CreatorSlide from '@/components/layout/CreatorSlide';
 import { ArrowRight } from 'lucide-react';
 
@@ -32,7 +31,7 @@ export default function Home() {
           </div>
           <CreatorSlide/>
         </div>
-        
+
         <div className='w-full h-fit flex flex-col gap-[2.5vw] px-[8vw]'>
           <div className='w-full h-fit flex justify-between items-center'>
             <div>
