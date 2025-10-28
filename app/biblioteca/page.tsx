@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { ChangeEvent } from "react";
 import Card from "@/components/layout/card";
+import ContainerGrid from "@/components/ui/ContainerGrid";
 
 type Manga = {
   id: string;
@@ -122,8 +123,8 @@ export default function Biblioteca() {
         {/* Filtros Horizontais */}
         <div className='w-full h-fit flex flex-col gap-[0.5vw] px-[8vw]'>
           <div>
-            <h1 className='text-[3vw] font-bold'>Nossa <span className=' text-shadow-[#00D315] text-shadow-lg'>Biblioteca</span></h1>
-            <span className='text-[1vw] font-semibold text-[#244224]'>Explore nossa coleção completa de mangás e quadrinhos</span>
+            <h1 className='text-[3vw] font-bold'>Nossa <span className=' text-shadow-neongreen text-shadow-lg'>Biblioteca</span></h1>
+            <span className='text-[1vw] font-semibold text-darkgreen'>Explore nossa coleção completa de mangás e quadrinhos</span>
           </div>
           <div className='flex items-center gap-[1vw] mb-[1vw]'>
             <button
@@ -140,7 +141,7 @@ export default function Biblioteca() {
               value={query}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
               placeholder='Procurar por título ou autor'
-              className='bg-[#121212] text-white px-[1vw] py-[0.6vw] rounded-lg w-full max-w-[30vw] outline-1 outline-[#244224] focus:outline-[#00D315]'
+              className='bg-[#121212] text-white px-[1vw] py-[0.6vw] rounded-lg w-full max-w-[30vw] outline-1 outline-darkgreen focus:outline-neongreen'
             />
             <button className='px-[1vw] py-[0.5vw] bg-neongreen text-black duration-300 font-semibold rounded-lg text-sm'>
               Buscar
@@ -154,7 +155,7 @@ export default function Biblioteca() {
               <span className='text-white/80 text-sm whitespace-nowrap'>Géneros:</span>
               <div className='flex flex-wrap gap-[0.5vw]'>
                 {ALL_GENRES.map((g) => (
-                  <label key={g} className='flex items-center gap-[0.3vw] text-white/90 text-sm cursor-pointer hover:text-[#00D315] transition-colors'>
+                  <label key={g} className='flex items-center gap-[0.3vw] text-white/90 text-sm cursor-pointer hover:text-neongreen transition-colors'>
                     <input
                       type='checkbox'
                       className='accent-neongreen w-[0.8vw] h-[0.8vw]'
@@ -207,14 +208,15 @@ export default function Biblioteca() {
         {/* Grid de Itens */}
         <section className='w-full h-fit flex flex-col gap-[2.5vw] px-[8vw]'>
           <div className='w-full h-fit flex'>
-            <h1 className='text-[2vw] font-bold'>Resultados <span className='text-[#00D315]'>Obtidos:</span></h1>
+            <h1 className='text-[2vw] font-bold'>Resultados <span className='text-neongreen'>Obtidos:</span></h1>
           </div>
 
-          <div className='w-full h-fit grid grid-cols-5 gap-[0.8vw] rounded-lg'>
-            {filtered.map((manga) => (
+          <ContainerGrid>
+          {filtered.map((manga) => (
               <Card key={manga.id} />
             ))}
-          </div>
+          </ContainerGrid>
+
         </section>
       </div>
     </>

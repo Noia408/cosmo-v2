@@ -16,14 +16,14 @@ export default function CreatorSlide() {
             modules={[Pagination]}
             className="w-full h-fit"
           >
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
-            <SwiperSlide className='w-fit h-fit'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
+            <SwiperSlide className='w-fit h-fit py-[1vw] px-[0.3vw]'><CardCreator/></SwiperSlide>
           </Swiper>
       </div>
   );
