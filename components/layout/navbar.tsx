@@ -49,7 +49,7 @@ export default function Navbar() {
               <li key={index}>
                 <Link
                   href={link.href}
-                  className={` text-[0.6vw] duration-300 ${pathname === link.href ? "text-[#00D315]" : "text-white"
+                  className={` text-[0.6vw] duration-300 ${pathname === link.href ? "text-neongreen" : "text-white"
                     }`}
                 >
                   {link.name}
