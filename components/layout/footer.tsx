@@ -16,10 +16,10 @@ const links = [
       name: "Criadores",
       href: "/criadores",
     },
-    {
-      name: "Notícias",
-      href: "/noticias",
-    },
+    // {
+    //   name: "Notícias",
+    //   href: "/noticias",
+    // },
     {
       name: "Loja",
       href: "/loja",
@@ -57,7 +57,7 @@ export default function footer() {
                 <div className="w-full h-full flex flex-col gap-[1vw]">
                     <span className="text-white text-[1.3vw] font-bold">Suporte</span>
                     <ul className="flex flex-col gap-[0.5vw]">
-                        <li><Link href={""} className={`text-white text-[0.9vw] hover:text-neongreen duration-300`}>Termos</Link></li>
+                        <li><Link href={"/termos"} className={`text-white text-[0.9vw] hover:text-neongreen duration-300`}>Termos</Link></li>
                         <li><Link href={""} className={`text-white text-[0.9vw] hover:text-neongreen duration-300`}>Privacidade</Link></li>
                         <li><Link href={""} className={`text-white text-[0.9vw] hover:text-neongreen duration-300`}>Direitos</Link></li>
                         <li><Link href={""} className={`text-white text-[0.9vw] hover:text-neongreen duration-300`}>Contactos</Link></li>

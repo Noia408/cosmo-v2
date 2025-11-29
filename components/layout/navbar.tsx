@@ -24,10 +24,10 @@ const links = [
     name: "Loja",
     href: "/loja",
   },
-  {
-    name: "Notícias",
-    href: "/noticias",
-  },
+  // {
+  //   name: "Notícias",
+  //   href: "/noticias",
+  // },
   {
     name: "Contactos",
     href: "/contactos",
